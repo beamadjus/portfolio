@@ -1,0 +1,124 @@
+/*---------------FONTS-------------*/
+@font-face {
+  font-family: Bitter;
+  src: url(./assets/fonts/Bitter-Regular.otf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(./assets/fonts/Montserrat-Regular.otf);
+}
+
+/*---------------HTML-BODY-------------*/
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background: linear-gradient(135deg,#fbc8d4 0%, #9795f0 100%);
+    font-family: Montserrat;
+}
+/* background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%); */
+/* background-image: linear-gradient(-225deg, #FF3CAC 0%, #562B7C 52%, #2B86C5 100%); */
+
+/*---------------NAME-------------*/
+
+.container{
+
+  position:absolute; /*it can be fixed too*/
+  left:0; right:0;
+  top:0; bottom:0;
+  margin:auto;
+
+  /*this to solve "the content will not be cut when the window is smaller than the content": */
+  max-width:100%;
+  max-height:100%;
+  overflow:auto;
+}
+
+.strike {
+  margin-top: 20%;
+  text-align: center;
+  font-family: Bitter;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.strike > span {
+    position: relative;
+    display: inline-block;
+    letter-spacing: 5px;
+    text-shadow: 1px 2px 5px #444444;
+    transition: transition: transform 0.2s ease;
+
+}
+
+.strike > span:before,
+.strike > span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 350px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.36);
+}
+
+.strike > span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.strike > span:after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+.strike p{
+  font-family: Montserrat;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-top: 1.5%;
+}
+
+.strike p span{
+  display: block;
+}
+
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.content img {
+  width: 50px;
+  height: 50px;
+  margin: 10px 0px 10px 35%;
+}
+
+.content h1{
+  font-family: Bitter;
+  font-size: 14px;
+  margin-top: 27px;
+}
+
+svg:not(:root).svg-inline--fa{
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 24px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+svg:not(:root).svg-inline--fa:hover{
+  color: #fbc8d4;
+  text-decoration: none;
+}
